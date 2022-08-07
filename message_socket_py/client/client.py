@@ -1,7 +1,6 @@
 import threading
 import socket
 import signal
-import sys
 from time import sleep
 
 server = 'localhost'
