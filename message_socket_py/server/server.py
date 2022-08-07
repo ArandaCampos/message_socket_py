@@ -17,9 +17,9 @@ def main():
         server.listen()
         ONLINE.set()
 
-        print(f'\nServidor conectado!\nOuvindo porta {port} ...')
+        print(f'\nServidor conectado!\nOuvindo porta {port} ...\n')
     except:
-        return print(f'\nFalha ao iniciar o servidor na porta {port}\n')
+        return print(f'\nFalha ao iniciar o servidor na porta {port}\n\n')
 
     while True:
         client, addr = server.accept()
@@ -59,6 +59,7 @@ def close_server(signum, frame):
     global ONLINE
 
     ONLINE.clear()
+    print('\rFechando servidor ...')
     exit(0)
 
 signal.signal(signal.SIGINT, close_server)
