@@ -55,9 +55,11 @@ def remove_cliente(client):
     if client in clients:
         clients.remove(client)
 
-def close_server():
+def close_server(signum, frame):
     global ONLINE
+
     ONLINE.clear()
+    exit(0)
 
 signal.signal(signal.SIGINT, close_server)
 
