@@ -59,14 +59,17 @@ def send_msg(client, username):
     while CONNECT_SIGNAL.is_set():
         try:
             msg = input('Você: ')
-            if msg == 'quit()':
-                CONNECT_SIGNAL.clear()
-            else:
-                client.send(f'{username}: {msg}'.encode('utf-8'))
+            client.send(f'{username}: {msg}'.encode('utf-8'))
         except:
             CONNECT_SIGNAL.clear()
 
 def send_msg_client_exit(client, username):
     client.send(f'\n{username} saiu da sala!\n'.encode('utf-8'))
+
+def close_connect(sigmun, frame):
+    global CONNECT_SIGNAL
+    CONNECT_SIGNAL.clear()
+
+signal.signal(signal.SIGINT, close_connect)
 
 main()
