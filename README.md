@@ -17,20 +17,13 @@
   
     # Clone o repositório
     >> git clone https://github.com/ArandaCampos/message_socket_py.git
-
-    # Crie um ambiente virtual
     >> cd message_socket_py
-    >> virtualenv .
-    >> source bin/activate
-
-    # Instale as dependências
-    (message_socket_py) >> pip install -r requirements.txt
     
     # Para rodar o servidor
-    (message_socket_py) >> python message_socket_py/server/server.py
+    >> python message_socket_py/server/server.py
     
     # Para rodar o lado cliente
-    (message_socket_py) >> python message_socket_py/client/client.py
+    >> python message_socket_py/client/client.py
   
 ### Tecnologias empregadas
   - Python
