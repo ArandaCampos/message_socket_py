@@ -8,10 +8,6 @@
 ### Bora ver como o projeto ficou?
 
 ![message_socket_py](https://user-images.githubusercontent.com/87876734/183315361-67d6209c-ff31-43ee-9000-dfc3bf9f1663.gif)
-
-### Pré-requisitos
-
-  - Python >= 3.8
   
 ### Instalação
   
